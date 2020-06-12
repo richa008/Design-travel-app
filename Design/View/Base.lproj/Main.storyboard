@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ow0-El-fbr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trips-->
+        <scene sceneID="nJT-tR-o83">
+            <objects>
+                <viewController id="0YU-Aa-4Vn" customClass="TripsViewController" customModule="Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4vV-ww-pip">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-b0-Q8B">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="sectionIndexBackgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ywg-b0-Q8B" firstAttribute="trailing" secondItem="BV4-ot-k48" secondAttribute="trailing" id="DAS-TS-luz"/>
+                            <constraint firstItem="ywg-b0-Q8B" firstAttribute="bottom" secondItem="BV4-ot-k48" secondAttribute="bottom" id="DDa-0A-swt"/>
+                            <constraint firstItem="ywg-b0-Q8B" firstAttribute="leading" secondItem="BV4-ot-k48" secondAttribute="leading" id="bom-Bm-7sq"/>
+                            <constraint firstItem="ywg-b0-Q8B" firstAttribute="top" secondItem="BV4-ot-k48" secondAttribute="top" id="euL-5Z-etK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BV4-ot-k48"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trips" id="CjM-Lu-t7g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZA1-Z2-af3">
+                            <color key="tintColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ywg-b0-Q8B" id="gD3-Jo-nkO"/>
+                        <segue destination="asq-OO-9X6" kind="show" identifier="showTripDetails" id="Ilz-kN-952"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xb-ts-q2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="866.51785714285711"/>
+        </scene>
+        <!--Packing list-->
+        <scene sceneID="K6Q-Fr-Vvc">
+            <objects>
+                <viewController id="33Y-8d-m1U" customClass="PackingListViewController" customModule="Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qg4-ah-eDN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bow-8e-ews"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Packing list" image="list.bullet" catalog="system" id="WXl-OL-iXL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22p-aX-YTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="1644"/>
+        </scene>
+        <!--Top attractions-->
+        <scene sceneID="GWm-8a-dTE">
+            <objects>
+                <viewController id="Dxg-yO-k5c" customClass="TopAttractionsViewController" customModule="Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oM4-hU-lMC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="U2b-GG-ROP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top attractions" image="star.fill" catalog="system" id="h8W-dr-DHO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ITJ-AN-r8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826" y="1644"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="E4w-Dl-76x">
+            <objects>
+                <viewController id="9k8-Uy-fUX" customClass="RestaurantsViewController" customModule="Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQU-vw-bwI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tKZ-zP-DA4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Restaurants" image="house.fill" catalog="system" id="XJX-KD-vWV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBI-oh-N7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3455" y="1051"/>
+        </scene>
+        <!--My attractions-->
+        <scene sceneID="gad-Ac-E5s">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="W5k-yd-rJl" customClass="MyAttractionsViewController" customModule="Design" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3pk-QE-gc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="sOE-zw-N21">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOL-Uk-pCM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9qG-Pv-q0M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title=" Add Attraction" image="plus.circle.fill" catalog="system">
+                                            <color key="titleColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="light"/>
+                                        </state>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="DmX-MB-Wq3">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sOE-zw-N21" firstAttribute="leading" secondItem="3mh-rv-Oeo" secondAttribute="leading" id="Pud-EZ-ROa"/>
+                            <constraint firstItem="sOE-zw-N21" firstAttribute="trailing" secondItem="3mh-rv-Oeo" secondAttribute="trailing" id="TtE-ms-OdZ"/>
+                            <constraint firstItem="sOE-zw-N21" firstAttribute="top" secondItem="3mh-rv-Oeo" secondAttribute="top" id="kvf-i8-6UH"/>
+                            <constraint firstItem="3mh-rv-Oeo" firstAttribute="bottom" secondItem="sOE-zw-N21" secondAttribute="bottom" id="zFC-W5-bU9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3mh-rv-Oeo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My attractions" image="map" catalog="system" id="a01-iW-cqB"/>
+                    <connections>
+                        <outlet property="addAttractionButton" destination="QOL-Uk-pCM" id="4cZ-I5-sJ6"/>
+                        <outlet property="tableView" destination="DmX-MB-Wq3" id="1Za-lD-jhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fi-fu-2Hq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3498.5507246376815" y="325.44642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="E5A-US-kel">
+            <objects>
+                <tabBarController hidesBottomBarWhenPushed="YES" id="asq-OO-9X6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bgL-Yl-36x"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LxI-Xs-2bI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="W5k-yd-rJl" kind="relationship" relationship="viewControllers" id="9OW-NR-Cc4"/>
+                        <segue destination="9k8-Uy-fUX" kind="relationship" relationship="viewControllers" id="jiy-Gx-nao"/>
+                        <segue destination="Dxg-yO-k5c" kind="relationship" relationship="viewControllers" id="SDT-NW-KiB"/>
+                        <segue destination="33Y-8d-m1U" kind="relationship" relationship="viewControllers" id="tpA-Eo-zyx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iA-ce-CtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781" y="844"/>
+        </scene>
+        <!--Trips Navigation Controller-->
+        <scene sceneID="NnC-Lb-bea">
+            <objects>
+                <navigationController title="Trips Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="ow0-El-fbr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trips" image="briefcase.fill" catalog="system" landscapeImage="briefcase.fill" largeContentSizeImage="briefcase.fill" id="jMH-as-xbm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rwj-va-hce">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                            <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0YU-Aa-4Vn" kind="relationship" relationship="rootViewController" id="4U7-yf-ahf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sD-iQ-bTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="892"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="briefcase.fill" catalog="system" width="128" height="102"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="map" catalog="system" width="128" height="113"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
